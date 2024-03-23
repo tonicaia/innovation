@@ -1,0 +1,11 @@
+.description-text {
+    color: var(--rhythm);
+    line-height: 1.8;
+    margin-block-end: 30px;
+  }
+  
+  .section-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }

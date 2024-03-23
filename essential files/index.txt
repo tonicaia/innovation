@@ -46,22 +46,22 @@ aria-label = Open shopping cart
 aria-label = Close whishlist
 <ion-icon name="close-outline"></ion-icon>
 
-alt = Bright Side Vegetarian
+alt = Cos de legume 5 kg
 
-Bright Side Vegetarian
-$20.15x1
+Cos de legume 5 kg
+86 RON x 1
 
 aria-label = Remove item
 <ion-icon name="close-outline"></ion-icon>
 
-Eco Vegetable
-$13.25x2
+Cos de fructe 5 kg
+76 RON x 2
 
-House of Veggies
-$20.15x1
+Cos mixt 5 kg
+86 RON x 1
 
 Subtotal:
-$215.14
+215 RON
 
 View Whishlist
 
@@ -253,7 +253,7 @@ Novella Gerber
 
 -- News And Blog --
 
-Bright Side Vegetarianism
+Cos de legume 5 kgism
 
 alt = We automatically search for andapply coupons when.
 
@@ -310,7 +310,7 @@ Contact Us
 Contact
 
 <ion-icon name="location-outline"></ion-icon>
-7 Green Lake Street Crawfordsville, IN 47933
+Piata Unirii nr 4 ap 10 Cluj Napoca, RO
 
 <ion-icon name="call-outline"></ion-icon>
 +1 800 123 456 789
@@ -327,7 +327,7 @@ Email Address *
 aria-labe = Submit
 <ion-icon name="mail-outline"></ion-icon>
 
-&copy; 2022 codewithsadee. All Rights Reserved.
+&copy; 2022 Vegloo. All Rights Reserved.
 
 Term and Service
 Privacy Policy
