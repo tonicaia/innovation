@@ -1,19 +1,19 @@
 <div align="center">
   
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/organica)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/organica?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/organica?style=social)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/Vegloo)
+  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/Vegloo?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/Vegloo?style=social)
 [![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
   [![YouTube Video Views](https://img.shields.io/youtube/views/sgCSEk1XsCo?style=social)](https://youtu.be/sgCSEk1XsCo)
 
   <br />
   <br />
 
-  <h2 align="center">Organica - eCommerce website</h2>
+  <h2 align="center">Vegloo - eCommerce website</h2>
 
-  Organica is a fully responsive organic ecommerce website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
+  Vegloo is a fully responsive organic ecommerce website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
 
-  <a href="https://codewithsadee.github.io/organica/"><strong>➥ Live Demo</strong></a>
+  <a href="https://codewithsadee.github.io/Vegloo/"><strong>➥ Live Demo</strong></a>
 
 </div>
 
@@ -21,7 +21,7 @@
 
 ### Demo Screeshots
 
-![Organica Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+![Vegloo Desktop Demo](./readme-images/desktop.png "Desktop Demo")
 
 ### Prerequisites
 
@@ -31,18 +31,18 @@ Before you begin, ensure you have met the following requirements:
 
 ### Run Locally
 
-To run **Organica** locally, run this command on your git bash:
+To run **Vegloo** locally, run this command on your git bash:
 
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/organica.git
+sudo git clone https://github.com/codewithsadee/Vegloo.git
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/codewithsadee/organica.git
+git clone https://github.com/codewithsadee/Vegloo.git
 ```
 
 ### Contact
