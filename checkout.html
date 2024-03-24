@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegloo - Quality organic fruit & vegetables.</title>
+
+    <!--
+      - favicon
+    -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!--
+      - custom css link
+    -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/about.css">
+
+
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet">
+
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                }
+                .container {
+                    width: 80%;
+                    margin: auto;
+                }
+                .step {
+                    display: none;
+                }
+                .step.active {
+                    display: block;
+                }
+                button {
+                    padding: 10px 20px;
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: #45a049;
+                }
+            </style>
+</head>
+
+
+<!--
+  - #HEADER
+-->
+
+<header class="header" data-header>
+    <div class="top-bar">
+        <div class="container">
+          <p>30% reducere la prima cutie comandată</p>
+        </div>
+    </div>
+
+    <div class="nav-wrapper">
+        <div class="container">
+
+            <h1 class="h1">
+                <a href="./index.html" class="logo">
+                  <img src="assets/images/logo.svg" alt="logo">
+                </a>
+            </h1>
+
+            <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <nav class="navbar" data-navbar>
+
+                <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="./index.html" class="navbar-link">Acasa</a>
+                    </li>
+
+                    <li>
+                        <a href="./about.html" class="navbar-link">Despre noi</a>
+                    </li>
+
+                    <li>
+                        <a href="./blog.html" class="navbar-link">Rețete</a>
+                    </li>
+
+                    <li>
+                        <a href="./contact.html" class="navbar-link">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="header-action">
+
+                <div class="search-wrapper" data-search-wrapper>
+
+                    <button class="header-action-btn" aria-label="Toggle search" data-search-btn>
+                        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                        <ion-icon name="close-outline" class="close-icon"></ion-icon>
+                    </button>
+
+                    <div class="input-wrapper">
+                        <input type="search" name="search" placeholder="Search here" class="search-input">
+
+                        <button class="search-submit" aria-label="Submit search">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </button>
+                    </div>
+
+                </div>
+
+                <button class="header-action-btn" aria-label="Open whishlist" data-panel-btn="whishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+
+                    <data class="btn-badge" value="3">03</data>
+                </button>
+
+                <button class="header-action-btn" aria-label="Open shopping cart" data-panel-btn="cart">
+                    <ion-icon name="basket-outline"></ion-icon>
+
+                    <data class="btn-badge" value="2">02</data>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+</header>
+
+
+<body>
+    <div class="container">
+    <div class="step" id="step1">
+        <h2>Step 1: Address Information</h2>
+        <form id="addressForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address"></textarea><br>
+            <label for="phone">Phone:</label><br>
+            <input type="text" id="phone" name="phone"><br>
+            <button type="button" onclick="nextStep()">Next</button>
+        </form>
+    </div>
+
+    <div class="step" id="step2">
+        <h2>Step 2: Shipping Method</h2>
+        <p>Choose your shipping method:</p>
+        <select id="shippingMethod">
+            <option value="standard">Standard Shipping</option>
+            <option value="express">Express Shipping</option>
+        </select><br><br>
+        <button type="button" onclick="prevStep()">Back</button>
+        <button type="button" onclick="nextStep()">Next</button>
+    </div>
+
+    <div class="step" id="step3">
+        <h2>Step 3: Payment Method</h2>
+        <p>Select your payment method:</p>
+        <input type="radio" id="creditCard" name="payment" value="creditCard">
+        <label for="creditCard">Credit Card</label><br>
+        <input type="radio" id="paypal" name="payment" value="paypal">
+        <label for="paypal">PayPal</label><br><br>
+        <button type="button" onclick="prevStep()">Back</button>
+        <button type="submit">Complete Purchase</button>
+    </div>
+</div>
+
+<script>s
+    let currentStep = 1;
+
+    function nextStep() {
+        if (currentStep < 3) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep++;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+        }
+    }
+
+    function prevStep() {
+        if (currentStep > 1) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep--;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+        }
+    }
+
+    document.getElementById('addressForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission for demo purposes
+        alert('Form submitted!'); // Replace this with your form submission logic
+    });
+</script>
+
+</body>
+<footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="./index.html" class="logo">Veg<span class="span">loo</span></a>
+
+          <p class="footer-text">
+            <p>&copy; 2024 Vegloo - Livrare la Ușa Ta pentru Produse Locale | Dezvoltat la Innovation Labs</p>
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-skype"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <a href="./about.html" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="./shop.html" class="footer-link">Shop</a>
+          </li>
+
+          <li>
+            <a href="./blog.html" class="footer-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="./shop.html" class="footer-link">Product</a>
+          </li>
+
+          <li>
+            <a href="./contact.html" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact</p>
+          </li>
+
+          <li class="footer-item">
+            <div class="contact-icon">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="contact-link">
+              Piata Unirii nr 4 ap 10 Cluj Napoca, RO
+            </address>
+          </li>
+
+          <li class="footer-item">
+            <div class="contact-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+1800123456789" class="contact-link">+1 800 123 456 789</a>
+          </li>
+
+          <li class="footer-item">
+            <div class="contact-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:Vegloo@help.com" class="contact-link">vegloo@help.com</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Newsletter</p>
+
+          <p class="newsletter-text">
+            You will be notified when somthing new will be appear.
+          </p>
+
+          <form action="" class="footer-form">
+            <input type="email" name="email" placeholder="Email Address *" required class="footer-input">
+
+            <button type="submit" class="footer-form-btn" aria-label="Submit">
+              <ion-icon name="mail-outline"></ion-icon>
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Term and Service</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+</html>
